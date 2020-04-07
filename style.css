@@ -1,3 +1,9 @@
+:root {
+  --hour: 0deg;
+  --minute: 0deg;
+  --second: 0deg;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,20 +26,22 @@
   position: absolute;
   -webkit-transform-origin: left;
           transform-origin: left;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
   top: 100px;
   left: 100px;
+  -webkit-transform: rotate(var(--hour));
+          transform: rotate(var(--hour));
 }
 
 #minute {
   width: 66.66667px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(var(--minute));
+          transform: rotate(var(--minute));
 }
 
 #second {
   border: 1px solid red;
   width: 80px;
+  -webkit-transform: rotate(var(--second));
+          transform: rotate(var(--second));
 }
 /*# sourceMappingURL=style.css.map */

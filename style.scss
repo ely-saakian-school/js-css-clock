@@ -1,5 +1,10 @@
 $img-width: 200px;
-$center: $img-width / 2;
+
+:root {
+    --hour: 0deg;
+    --minute: 0deg;
+    --second: 0deg;
+}
 
 * {
     margin: 0;
@@ -22,19 +27,20 @@ $center: $img-width / 2;
     border: 1px solid black;
     position: absolute;
     transform-origin: left;
-    transform: rotate(0);
     top: $img-width / 2;
     left: $img-width / 2;
+    transform: rotate(var(--hour));
 }
 
 #minute {
     @extend #hour;
     width: $img-width / 3;
-    transform: rotate(45deg);
+    transform: rotate(var(--minute));
 }
 
 #second {
     @extend #hour;
     border: 1px solid red;
     width: $img-width / 2.5;
+    transform: rotate(var(--second));
 }
